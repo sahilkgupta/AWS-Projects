@@ -45,27 +45,27 @@ Choose Launch Template: WebAppTemplate
 
 Configure Group Size:
 
-Desired Capacity: 2
+> Desired Capacity: 2
 
-Minimum Instances: 1
+> Minimum Instances: 1
 
-Maximum Instances: 4
+> Maximum Instances: 4
 
 Select Network:
 
-Choose an existing VPC
+> Choose an existing VPC
 
-Select at least two subnets across different AZs
+> Select at least two subnets across different AZs
 
 Attach Load Balancer:
 
-Choose Application Load Balancer (ALB)
+> Choose Application Load Balancer (ALB)
 
 Create Target Group:
 
-Target Type: Instance
+> Target Type: Instance
 
-Protocol: HTTP
+> Protocol: HTTP
 
 Health Check Path: /
 
@@ -138,6 +138,7 @@ Check EC2 → Auto Scaling Group to confirm that new instances are launched when
 Manually stop an instance and observe Auto Scaling automatically launch a new one.
 
 ✅ Conclusion
+
 This setup ensures:
 
 High Availability using ALB
@@ -155,11 +156,10 @@ Fault tolerance
 Cost optimization
 
 🏗️ Architecture Diagram (Conceptual)
-scss
-Copy code
+
            ┌──────────────────────────────┐
            │      Application Load        │
-           │          Balancer (ALB)      │
+           │       Balancer (ALB)         │
            └──────────────┬───────────────┘
                           │
         ┌─────────────────┴──────────────────┐
@@ -172,6 +172,7 @@ Copy code
         └──────────────┬─────────────────────┘
                        │
                Auto Scaling Group
+               
 🧩 Future Enhancements
 Add HTTPS Listener with SSL Certificate
 
